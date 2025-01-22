@@ -1,6 +1,6 @@
 # Project Description
 
-Sensor DHT11 with Red LED Control
+Sensor DHT11 with ESP32 Board
 
 This project demonstrates the integration of the DHT11 temperature and humidity sensor with an ESP32-WROOM-32U microcontroller board. The system reads temperature data when a button is pressed and interacts with the HiveMQ platform as an IoT hub.
 
@@ -36,6 +36,6 @@ Press the button to initiate a temperature reading.
 
 The DHT11 sensor captures the temperature.
 
-The red LED lights up to indicate the operation.
+The red LED lights up to verify the connection with the platform Hive_mq .
 
 The ESP32 board sends the data to HiveMQ over MQTT for monitoring or analysis.
