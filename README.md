@@ -39,3 +39,28 @@ The DHT11 sensor captures the temperature.
 The red LED lights up to verify the connection with the platform Hive_mq .
 
 The ESP32 board sends the data to HiveMQ over MQTT for monitoring or analysis.
+
+# Setup Instructions for windows 
+
+1. Copy the example secrets file to create your own `secrets.h`:
+
+# Setup Instructions for Linux/MacOs
+
+1) For macOs/Linux Users, you can create a script (setup.sh)  toa automate  copying teh file 
+--------setup.sh ----------------
+
+#!/bin/bash
+if [ ! -f secrets.h ]; then
+    cp secrets.example.h secrets.h
+    echo "secrets.h created! Please update it with your WiFi credentials."
+else
+    echo "secrets.h already exists."
+fi
+
+-----------end setup.sh--------------
+
+
+2) to  Make it ececutable : chmod +x setup.sh
+
+
+3) to run the script :  ./setup.sh 

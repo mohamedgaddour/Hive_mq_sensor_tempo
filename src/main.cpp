@@ -2,9 +2,14 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <Wire.h>
+#ifdef WIFI_SSID
+#include secrets.h 
+#else
+#error "Misssing secrets.h file ! Create it and define WIFI_SSID and WIFI_PASSWORD"
+#endif 
 
-const char* ssid = "Gnet-";
-const char* password = "73576193";
+const char* ssid = WIFI_SSID;
+const char* password = WIFI_PASSWORD;
 const char* mqtt_server = "broker.hivemq.com";
 const char* unique_identifier = "sunfounder-client-sdgvsda";
 
